@@ -1,0 +1,62 @@
+@use "../abstract/mixins";
+
+
+.contact {
+    padding: 5rem 5rem;
+    background-color: rgb(243, 239, 239);
+
+    @include mixins.responsive(xs) {
+        padding: 2rem 1rem;
+    }
+
+    @include mixins.responsive(sm) {
+        padding: 2rem 3rem;
+    }
+
+    @include mixins.responsive(sm) {
+        padding: 2rem 3rem;
+    }
+
+    &--card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        padding: 2rem 3rem;
+        border-radius: 0.5rem;
+
+        @include mixins.responsive(xs) {
+            align-items: center;
+            padding: 2rem;
+            flex-direction: column;
+        }
+
+        @include mixins.responsive(sm) {
+            align-items: center;
+            padding: 2rem;
+            flex-direction: column;
+        }
+
+        @include mixins.responsive(sm) {
+            align-items: center;
+            padding: 2rem;
+            flex-direction: row;
+        }
+
+        &--contents {
+
+            flex-grow: 1;
+
+            h4 {
+                font-size: 1rem;
+            }
+
+            p {
+                color: gray;
+            }
+
+        }
+
+
+    }
+}

@@ -1,0 +1,101 @@
+@use "../abstract/variable" as var;
+@use "../abstract/function" as fun;
+@use "../abstract/mixins" as mixins;
+
+.roadmap{
+    padding: 5rem 10rem;
+
+    @include mixins.responsive(xs){
+        padding: 2rem 2rem;
+    }
+    @include mixins.responsive(sm){
+        padding: 3rem 3rem;
+    }
+
+    &--heading{
+        text-align: center;
+    }
+
+    &--items{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        margin-top:3rem;
+        position: relative;
+
+        @include mixins.responsive(xs){
+            flex-direction: column;
+        }
+    }
+
+    #arrow{
+        color: #3f43fd;
+        
+        @include mixins.responsive(xs){
+            display: none;
+        }
+    }
+    &--item{
+        padding: 3rem;
+        text-align: center;
+        max-width: 300px;
+        position: relative;
+        filter: grayscale(100%);
+        transition: 500ms;
+        cursor: pointer;
+       
+        &:not(:last-child){
+            margin-right: 30px;
+
+            @include mixins.responsive(xs){
+                margin-right: 13px;
+            }
+        }
+
+        
+
+        &:hover &__img::after{
+            animation: rotate-infinite 4000ms linear infinite;
+        }
+
+        &__img{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 0px auto 3px;
+            img{
+                width: 60px;
+                margin-top: 15px;
+                margin-left: -10px;
+            }
+
+            &::after{
+                position: absolute;
+                left: -10px;
+                top: -10px;
+                border-radius: 50%;
+                content: "";
+                width: 100%;
+                height: 100%;
+                border: 5px dotted #3f43fd;
+            }
+        }
+
+        &__contants{
+            margin-top: 2rem;
+
+            h5{
+                font-size: 1rem;
+                margin-bottom: 10px;
+            }
+
+            p{
+                font-size: 0.7rem;
+                line-height: 1.5;
+            }
+        }
+        &:hover{
+            filter: grayscale(0);
+        }
+    }
+}

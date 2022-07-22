@@ -1,0 +1,110 @@
+@use "../abstract/mixins" as mixins;
+
+.background-shapes{
+
+    @include mixins.responsive(xs){
+        display: none;
+    }
+    @include mixins.responsive(sm){
+        display: none;
+    }
+    @include mixins.responsive(lg){
+        display: block;
+    }
+
+    .box1{
+        width: 15px;
+        height: 15px;
+        background-color: transparent;
+        border: 3px solid #3135e8;
+        position: absolute;
+        top: 100%;
+        left: 20%;
+        border-radius: 4px;
+        z-index: -1;
+        transform: rotate(360deg);
+        animation: box-shape linear 5s infinite;
+    }
+    .box2{
+        width: 15px;
+        height: 15px;
+        background-color: transparent;
+        border: 3px solid #3135e8;
+        position: absolute;
+        top: 170%;
+        left: 45%;
+        border-radius: 4px;
+        z-index: -1;
+        transform: rotate(360deg);
+        animation: box-shape linear 5s infinite;
+    }
+    .box3{
+        width: 15px;
+        height: 15px;
+        background-color: transparent;
+        border: 3px solid #f4284a;
+        position: absolute;
+        top: 140%;
+        left: 95%;
+        border-radius: 4px;
+        z-index: -1;
+        transform: rotate(360deg);
+        animation: box-shape linear 5s infinite;
+    }
+    .dot1{
+        width: 8px;
+        height: 8px;
+        background-color: #f4284a;
+        position: absolute;
+        top: 160%;
+        left: 30%;
+        border-radius: 50%;
+        z-index: -1;
+        transform: rotate(360deg);
+        animation: box-shape linear 5s infinite;
+    }
+    .dot2{
+        width: 8px;
+        height: 8px;
+        background-color:#3135e8;
+        position: absolute;
+        top: 130%;
+        left: 40%;
+        border-radius: 50%;
+        z-index: -1;
+        transform: rotate(360deg);
+        animation: box-shape linear 5s infinite;
+    }
+    .dot3{
+        width: 8px;
+        height: 8px;
+        background-color: #f4284a;
+        position: absolute;
+        top: 140%;
+        left: 5%;
+        border-radius: 50%;
+        z-index: -1;
+        transform: rotate(360deg);
+        animation: box-shape linear 5s infinite;
+    }
+    .heart1{
+        color: #f4284a;
+        position: absolute;
+        top: 160%;
+        left: 10%;
+        z-index: -1;
+        transform: rotate(360deg);
+        animation: box-shape linear 5s infinite;
+    }
+    .heart2{
+        color: #3135e8;
+        position: absolute;
+        top: 100%;
+        left: 95%;
+        z-index: -1;
+        transform: rotate(360deg);
+        animation: box-shape linear 5s infinite;
+    }
+
+
+}

@@ -1,0 +1,39 @@
+@use "../abstract/mixins" as mixins;
+
+footer{
+    padding: 2rem 5rem;
+    text-align: center;
+    background-color: #3f43fd;
+    color: white;
+
+    @include mixins.responsive(xs){
+        padding: 2rem 1rem;
+
+    }
+
+    h2{
+        font-size: 24px;
+
+        @include mixins.responsive(xs){
+            font-size: 20px;
+        }
+    }
+    p{
+        color: white;
+        font-size: 16px;
+
+        @include mixins.responsive(xs){
+            font-size: 11px;
+        }
+    }
+
+    .social-icon > a > i{
+        font-size: 1.2rem;
+        color:#15165a;
+        margin:12px 5px ; 
+
+        &:hover{
+            color: white;
+        }
+    }
+}

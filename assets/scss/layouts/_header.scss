@@ -1,0 +1,124 @@
+@use "../abstract/variable" as var ;
+@use "../abstract/function" as fun ;
+@use  "../abstract/mixins" as mixins;
+
+
+.header{
+    padding: 1rem 10rem;
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+
+    @include mixins.responsive(xs){
+        padding: 1rem 2rem;
+    }
+    @include mixins.responsive(sm){
+        padding: 1rem 2rem;
+    }
+    @include mixins.responsive(md){
+        padding: 1rem 4rem;
+    }
+    @include mixins.responsive(xlg){
+        padding: 1rem 7rem;
+    }
+
+    h2{
+        color: black;
+
+        @include mixins.responsive(sm){
+            font-size: 29px;
+        }
+        @include mixins.responsive(md){
+            font-size: 32px;
+        }
+
+    }
+    &--icon{
+
+        i{
+            @include mixins.responsive(xs){
+                font-size: 1.2rem;
+            }
+            @include mixins.responsive(sm){
+                font-size: 1.6rem;
+            }
+            @include mixins.responsive(md){
+                font-size: 2rem;
+            }
+            @include mixins.responsive(lg){
+                display: none;
+            }
+        }
+
+        .hidden{
+            display: none;
+        }
+    }
+
+    &--menu {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        text-transform: uppercase;  
+        
+        @include mixins.responsive(xs){
+            display: none;
+
+            position: fixed;
+            top: -110%;
+            left: 0;
+            width: 100vw;
+            background-color: rgb(90, 90, 238);
+            height: 100vh;
+            z-index: 1;
+            transition: 500ms;
+
+            &.show{
+                display: block;
+                top: 71px;
+                text-align: center;
+            }
+
+            & li{
+                padding: 2rem;
+
+                a{
+                    color: #eee;
+
+                    &.active{
+                        color: #eee;
+                    }
+                }
+            }
+        }
+        @include mixins.responsive(sm){
+            display: none;
+        }
+        @include mixins.responsive(md){
+            display: none;
+        }
+        @include mixins.responsive(lg){
+            display: flex;
+        }
+
+        &--item {
+            margin-right:1.5rem;
+            font-size: 14px;
+            font-weight: 600;
+
+            a {
+                color: #242424;
+                transition: 200ms;
+                
+                &:hover {
+                    color: fun.theme-colors()
+                }
+                &.active{
+                    color: fun.theme-colors()
+                }
+            }
+        }
+    }
+}  

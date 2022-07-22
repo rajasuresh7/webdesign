@@ -1,0 +1,15 @@
+@use "../abstract/variable" as var ;
+@use "../abstract/function" as fun ;
+
+.btn{
+    padding: 0.3rem 1rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+
+    &-primary{
+        background-color: fun.theme-colors();
+        color: white;
+        font-size: 15px;
+    }
+}

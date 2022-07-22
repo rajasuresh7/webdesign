@@ -1,0 +1,27 @@
+//abstract
+@import "./abstract/mixins";
+//base
+@import "./base/reset";
+@import "./base/global";
+
+//utilities
+@import "./utilites/animation";
+@import "./utilites/slider";
+@import "./utilites/_background_elements.scss";
+
+
+//components
+@import "./components/button";
+@import "./components/form";
+
+//layouts
+@import "./layouts/header";
+
+//pages
+@import "./pages/home";
+@import "./pages/about";
+@import "./pages/roadmap";
+@import "./pages/service";
+@import "./pages/contact";
+@import "./pages/fooder";
+
